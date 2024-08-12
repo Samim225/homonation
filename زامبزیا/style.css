@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+   background-color: black;
+}
+header{
+    background-color: saddlebrown;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px;
+    
+}
+.home{
+    background-color: transparent;
+    margin-left: 20px;
+    
+}
+.logo{
+    background-color: transparent;   
+    color: sandybrown; 
+    text-align: center;
+    font-size: xx-large;
+    margin: auto 20px;
+}
+
+/*Off screen menu*/
+.off-screen-menu{
+    background-color: saddlebrown;
+    color: sandybrown;
+    height: 100vh;
+    width: 100%;
+    max-width: 450px;
+    position: fixed;
+    top: 0;
+    right: -450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 40px;
+    transition: .4s ease-in;
+}
+.off-screen-menu.active{
+    right: 0;
+
+}
+.container-of-ham-menu{
+    background-color: transparent;
+    display: flex;
+    padding: 1rem;
+}
+.ham-menu{
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    margin-right: 10px;
+    position: relative;
+    z-index: 2;
+    padding: 5px;
+    
+}
+.ham-menu span{
+    height: 10px;
+    width: 100px;
+    background-color: sandybrown;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .4s ease-out;
+}
+.ham-menu span:nth-child(1){
+    top: 25%;
+margin-top: -5px;
+}
+.ham-menu span:nth-child(2){
+    top: 75%;
+    margin-top:5px;
+}
+.ham-menu.active span:nth-child(1){
+    top: 51%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.ham-menu.active span:nth-child(2){
+   opacity: 0;
+}
+.ham-menu.active span:nth-child(3){
+    top: 51%;
+   
+    transform: translate(-50%, -50%) rotate(-45deg);
+ }
+ /*main side the side that the inf abut the picutre and others will be on*/
+ main{
+    display: flex;
+   
+ }
+ 
+ .pic{
+   margin: 100px 0px 90px auto;
+  
+    width: 200px;
+  display: flex;
+  justify-content: space-around;
+ }
+ .zambizia{
+   margin-right: 140px;
+    border-radius: 20px;
+    margin-left: 180px;
+ }
+ .info{
+  
+    height: 200px;
+    align-self: center;
+    margin-left: 60px;
+    width: 500px;
+ }
+ h1{
+    text-align: center;
+    text-decoration: none;
+color: white;
+ }
+pre{
+    color: white;
+    font-size: large;
+}
+section{
+   
+    height: 400px;
+    width: 1000px;
+    scroll-behavior: smooth;
+}
+section video{
+margin-top: 80px;
+    height: 250px;
+    width: 400px;
+    border-radius: 20px;
+}
+footer{
+    display: grid;
+   grid-template-columns: repeat(4,1fr) ;
+ margin-left: -100px;
+   gap: 20px;
+}
+footer img{
+    height: 300px;
+    width: 250px;
+    border-radius: 25px;
+    transition: all .4s ;
+}
+footer img:hover{
+    transform: translateY(-30px) scale(1.2);
+    box-shadow: 0px 0px 70px white;
+}
